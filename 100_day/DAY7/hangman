@@ -1,0 +1,46 @@
+#Step 4
+import random
+import hangmanArt 
+import hangmanWords
+
+print(hangmanArt.logo)
+word_list = hangmanWords.word_list
+chosen_word = list(random.choice(word_list))
+word_length = len(chosen_word)
+
+#TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
+#Set 'lives' to equal 6.
+lives = 6
+#Testing code
+# print(chosen_word)
+
+#Create blanks
+display = []
+for _ in range(word_length):
+    display += "_"
+# Logic for running the loop
+# and displaying each letter as it is guessed by user input
+while '_' in display and lives != 0:
+    # taking input repeatedly
+    guess = input("Guess a letter: \n").lower()
+    # To check wether entered number is in there or not
+    if guess in chosen_word:
+      for i in range(0,len(chosen_word)):
+        if guess == chosen_word[i]:
+          display[i] = guess
+      if guess in display :
+          print(f"You have already guessed letter {guess}")
+      print(display)
+# keeping track of user's lives and printing updated hanging man according to the answers
+    else:
+      lives-=1
+      print(hangmanArt.stages[lives])
+      print(f"{guess} is not in the word")
+    
+# while is over . printing the results
+
+if "_" not in display:
+        print("You win.")
+if lives == 0:
+      print("You lose")
+    
