@@ -1,0 +1,7 @@
+1.)all data is in the dictionary nested into list.Create a list of objects where each objects have 2 attributes. one is text another is answer.  
+
+2.)pass this object list into qiuzbrain
+
+3.)write logic for printing question one after another
+
+4.) create a function to verify the answers and keep track of score
