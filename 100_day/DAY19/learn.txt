@@ -1,0 +1,9 @@
+Higher order function.{
+    When a function A takes another function B as an argument; A is called HOF.
+    A(B,*args) we don't use () after function B's name because it's being passed on as an argument in another function.
+    using( ) immidietly triggers the function 
+}
+
+Task 1:space.py 
+Task 2: etchASkech.py
+then main project of turtle racing!
